@@ -1,0 +1,46 @@
+library ieee ;
+    use ieee.std_logic_1164.all;
+    use ieee.numeric_std.all;
+    use std.textio.all;
+
+library work;
+
+entity instruction_memory is
+    port (
+        data_in : in std_logic_vector(11 downto 0);
+        data_out : out std_logic_vector(31 downto 0)
+    );
+    
+end instruction_memory;
+
+architecture arch of instruction_memory is
+    type mem is array (0 to 4095) of std_logic_vector(31 downto 0);
+    signal andress: integer := 0;
+
+    impure function init_memory return mem is
+
+        file text_file: TEXT open read_mode is "code.txt";
+        variable text_line: line;
+        variable mem_content: mem;
+        variable mem_content_bit_vector: bit_vector(31 downto 0) := (others => '0');
+
+    begin
+        
+        for i in 0 to 4095 loop
+            if(not endfile(text_file)) then
+                readline(text_file, text_line);
+                read(text_line, mem_content_bit_vector);
+                mem_content(i) := to_stdlogicvector(mem_content_bit_vector);
+            end if;
+        end loop;
+
+    end function;
+
+    signal mem_rom : mem := init_memory;
+    
+begin
+
+    andress <= to_integer(unsigned(data_in)) /4;
+    data_out <= mem_rom(andress);
+    
+end architecture ;
