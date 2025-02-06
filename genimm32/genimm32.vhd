@@ -1,6 +1,6 @@
 library ieee ;
     use ieee.std_logic_1164.all ;
-    use ieee.numeric_std.alC
+    use ieee.numeric_std.all;
 
 entity genImm32 is
     port (
@@ -30,12 +30,12 @@ begin
 
     with opcode select
     imm32 <=
-        to_signed(0, 32) when x"33", -- Instru��o R_type
-        imm32I when x"03" | x"13" | x"67", -- Instru��o I_type
-        resize(signed(instr(31 downto 25) & instr(11 downto 7)), 32) when x"23", -- Instru��o S_type
-        resize(signed(instr(31) & instr(7) & instr(30 downto 25) & instr(11 downto 8) & '0'), 32) when x"63", -- Instru��o SB_type
-        resize(signed(instr(31 downto 12) & x"000"), 32) when x"37", -- Instru��o U_type
-        resize(signed(instr(31) & instr(19 downto 12) & instr(20) & instr(30 downto 21) & '0'), 32) when x"6F", -- Instru��o UJ_type
-	to_signed(0, 32) when others; -- Instru��o R_type
+        to_signed(0, 32) when x"33", -- Instru  o R_type
+        imm32I when x"03" | x"13" | x"67", -- Instru  o I_type
+        resize(signed(instr(31 downto 25) & instr(11 downto 7)), 32) when x"23", -- Instru  o S_type
+        resize(signed(instr(31) & instr(7) & instr(30 downto 25) & instr(11 downto 8) & '0'), 32) when x"63", -- Instru  o SB_type
+        resize(signed(instr(31 downto 12) & x"000"), 32) when x"37", -- Instru  o U_type
+        resize(signed(instr(31) & instr(19 downto 12) & instr(20) & instr(30 downto 21) & '0'), 32) when x"6F", -- Instru  o UJ_type
+	to_signed(0, 32) when others; -- Instru  o R_type
 
 end architecture ;

@@ -1,0 +1,35 @@
+
+library ieee ;
+    use ieee.std_logic_1164.all;
+    use ieee.numeric_std.all;
+
+entity unicycle_riscv_tb is
+end unicycle_riscv_tb;
+
+architecture tb of unicycle_riscv_tb is
+    signal clk : std_logic := '0';
+    constant clk_period : time := 10 ns;
+    signal rst : std_logic := '1';
+    component unicycle_riscv is
+	port (
+	    clk : in std_logic;
+	    pc_rst : in std_logic
+   	);
+    end component;
+
+begin
+    process is
+    begin
+        clk <= '0';
+        wait for clk_period / 2;
+        clk <= '1';
+        wait for clk_period / 2;
+	if (rst = '1') then rst <= '0'; end if;
+    end process;
+    
+    dut : unicycle_riscv
+    port map (
+	clk => clk,
+	pc_rst => rst
+    );
+end tb;

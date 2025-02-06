@@ -5,7 +5,7 @@ library ieee ;
 
 entity data_memory is
     port (
-        we, re: in std_logic;
+        clk, we, re: in std_logic;
         addr: in std_logic_vector(11 downto 0);
         data_in: in std_logic_vector(31 downto 0);
         data_out: out std_logic_vector(31 downto 0) := x"00000000"
@@ -33,20 +33,25 @@ architecture arch of data_memory is
                 mem_content(i) := to_stdlogicvector(mem_content_bit_vector);
             end if;
         end loop;
-
+	return mem_content;
     end function;
 
     signal mem_ram : mem := init_memory;
 
 begin
-    process(we, re)
+    process(clk)
     begin
-        if we = '1' then
-            mem_ram(to_integer(unsigned(addr))) <= data_in;
-        end if;
-
-        if re = '1' then
-            data_out <= mem_ram(to_integer(unsigned(addr)));
-        end if;
+        if rising_edge(clk) then
+            if we = '1' then
+       		mem_ram(to_integer(unsigned(addr))) <= data_in;
+            end if;
+	end if;
     end process;
+
+   process (addr, re, clk)
+   begin
+      if re = '1' then
+          data_out <= mem_ram(to_integer(unsigned(addr)));
+      end if;
+   end process;
 end architecture ;

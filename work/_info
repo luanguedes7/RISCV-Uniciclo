@@ -1,0 +1,565 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/mux
+Eadder
+Z0 w1738347941
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv
+Z5 8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/adder/adder.vhd
+Z6 FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/adder/adder.vhd
+l0
+L5
+V`bCXHHOe981N?5BHS8bZ70
+!s100 PlfZG::0nQifHKl;jSl^]1
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1738692148
+!i10b 1
+Z9 !s108 1738692148.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/adder/adder.vhd|
+Z11 !s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/adder/adder.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Aarch
+R1
+R2
+R3
+DEx4 work 5 adder 0 22 `bCXHHOe981N?5BHS8bZ70
+l15
+L13
+Va`J43jB1JN5JULjV:HJ4H2
+!s100 YBESIi]OJ6DAKalW[=^AY0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealu
+R0
+R1
+R2
+R3
+R4
+8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/alu/alu.vhd
+FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/alu/alu.vhd
+l0
+L5
+VGXeF4K1>PYjU=D6WLJ@lM1
+!s100 b[Ede`ZWYoMIKjc:aH?;L0
+R7
+33
+!s110 1738360248
+!i10b 1
+!s108 1738360248.000000
+!s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/alu/alu.vhd|
+!s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/alu/alu.vhd|
+!i113 1
+Z14 o-work work -2008 -explicit
+R13
+Ealu_control
+R0
+R1
+R2
+R3
+R4
+Z15 8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/alu_control/alu_control.vhd
+Z16 FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/alu_control/alu_control.vhd
+l0
+L5
+VFlZcZe0T@[34`dmWKNE[[3
+!s100 5H1dOI^>WY4BSIkX5K:[_1
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/alu_control/alu_control.vhd|
+Z18 !s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/alu_control/alu_control.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 11 alu_control 0 22 FlZcZe0T@[34`dmWKNE[[3
+l17
+L15
+VH0;K6kAFaOUXI`no1c[n52
+!s100 G14ZK_F7:7=Z]MboVn15e1
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Econtrol
+Z19 w1738359439
+R1
+R2
+R3
+R4
+Z20 8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/control/control.vhd
+Z21 FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/control/control.vhd
+l0
+L6
+VXN18:g?Gn:K9eS8HBl@h73
+!s100 9_:7RkUH?oOd_Cic<oi^^0
+R7
+32
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/control/control.vhd|
+Z23 !s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/control/control.vhd|
+!i113 1
+R12
+R13
+Aarc
+R1
+R2
+R3
+DEx4 work 7 control 0 22 XN18:g?Gn:K9eS8HBl@h73
+l21
+L20
+Vbg=i>k5dnfMOh4V6eQ7^T3
+!s100 oOJG8T=Y]=hVWT^@8QmSo0
+R7
+32
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+R13
+Edata_memory
+Z24 w1738436670
+R1
+R2
+R3
+R4
+Z25 8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/data_memory/data_memory.vhd
+Z26 FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/data_memory/data_memory.vhd
+l0
+L6
+VaQ_0PFXAnBz_=Q^oi4l9I0
+!s100 =fdkG17aAoUE;nm57PMjX1
+R7
+32
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/data_memory/data_memory.vhd|
+Z28 !s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/data_memory/data_memory.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 11 data_memory 0 22 aQ_0PFXAnBz_=Q^oi4l9I0
+l41
+L16
+Vln>SB5`m_BQCD]f0AigQT2
+!s100 ;5=UF`g7^F0Z3eiEYA:e]2
+R7
+32
+R8
+!i10b 1
+R9
+R27
+R28
+!i113 1
+R12
+R13
+Egenimm32
+Z29 w1738359821
+R1
+R2
+R3
+R4
+Z30 8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/genimm32/genimm32.vhd
+Z31 FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/genimm32/genimm32.vhd
+l0
+L5
+V40nPe39>>LcUAm2ah]WB53
+!s100 NE:;[fI8]fjHlD>O=`bCj1
+R7
+32
+R8
+!i10b 1
+R9
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/genimm32/genimm32.vhd|
+Z33 !s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/genimm32/genimm32.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 8 genimm32 0 22 40nPe39>>LcUAm2ah]WB53
+l20
+L12
+VkXaT<1R9Q`aL[YfQZ1dNj2
+!s100 @_E6N8EgUI8YeVze>Cg8f3
+R7
+32
+R8
+!i10b 1
+R9
+R32
+R33
+!i113 1
+R12
+R13
+Einstruction_memory
+Z34 w1738693162
+R1
+R2
+R3
+R4
+Z35 8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/instruction_memory/instruction_memory.vhd
+Z36 FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/instruction_memory/instruction_memory.vhd
+l0
+L8
+VY^X1^97A<R8RmQ[D5a87:2
+!s100 g34a;83KlD292:6XYPK8<2
+R7
+33
+Z37 !s110 1738693228
+!i10b 1
+Z38 !s108 1738693228.000000
+Z39 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/instruction_memory/instruction_memory.vhd|
+Z40 !s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/instruction_memory/instruction_memory.vhd|
+!i113 1
+R14
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 18 instruction_memory 0 22 Y^X1^97A<R8RmQ[D5a87:2
+l42
+L16
+Ve196=9m=1H375>7aQZKi`3
+!s100 1`IfBAA<RHPTZXZ<3J9Jn1
+R7
+33
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R14
+R13
+Emux
+R0
+R1
+R2
+R3
+R4
+Z41 8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/mux/mux.vhd
+Z42 FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/mux/mux.vhd
+l0
+L5
+VCUl`?G8`L4kR^@X:OIT<H3
+!s100 6ULQ;mHb2LUCE>@DmbV7a2
+R7
+32
+R8
+!i10b 1
+R9
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/mux/mux.vhd|
+Z44 !s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/mux/mux.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 3 mux 0 22 CUl`?G8`L4kR^@X:OIT<H3
+l16
+L14
+V=gG2h6<:P5AZQT=PTCmXV0
+!s100 8Fo6>miaM6JmE_^K>YQ_j2
+R7
+32
+R8
+!i10b 1
+R9
+R43
+R44
+!i113 1
+R12
+R13
+Emux4
+Z45 w1738359880
+R1
+R2
+R3
+R4
+Z46 8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/mux/mux4.vhd
+Z47 FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/mux/mux4.vhd
+l0
+L6
+V8b_W<h1O_b<C9m]2BNP4E3
+!s100 P<fWlMBgdg?9O]l:80ZYI2
+R7
+32
+R8
+!i10b 1
+R9
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/mux/mux4.vhd|
+Z49 !s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/mux/mux4.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 4 mux4 0 22 8b_W<h1O_b<C9m]2BNP4E3
+l17
+L15
+VKc=5cm3Pi_M?1Jee[NV_B1
+!s100 k7Rg@jP]Q1;:mi;J_gdOh2
+R7
+32
+R8
+!i10b 1
+R9
+R48
+R49
+!i113 1
+R12
+R13
+Epc
+R0
+R1
+R2
+R3
+R4
+Z50 8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/pc/pc.vhd
+Z51 FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/pc/pc.vhd
+l0
+L5
+VgkKBL0NI>lcfIoi;^cF:63
+!s100 kVl^f=Llg]=oj5Io>g2TW1
+R7
+32
+R8
+!i10b 1
+R9
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/pc/pc.vhd|
+Z53 !s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/pc/pc.vhd|
+!i113 1
+R12
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 2 pc 0 22 gkKBL0NI>lcfIoi;^cF:63
+l16
+L14
+V3fT=bIVo^80lNPQe5I3[23
+!s100 7^>Hj_?`J9GCHYY=0?7@=1
+R7
+32
+R8
+!i10b 1
+R9
+R52
+R53
+!i113 1
+R12
+R13
+Eularv
+Z54 w1738108830
+R1
+R2
+R3
+R4
+Z55 8C:/Users/migma/Documents/7Semestre/OAC/Trabalho7/ULA_RV.vhd
+Z56 FC:/Users/migma/Documents/7Semestre/OAC/Trabalho7/ULA_RV.vhd
+l0
+L5
+VDz[zon2cU4jTH=1jCWlCS3
+!s100 d1X?1F7NWLhX^2g`Fd<WV0
+R7
+32
+R8
+!i10b 1
+R9
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/Trabalho7/ULA_RV.vhd|
+Z58 !s107 C:/Users/migma/Documents/7Semestre/OAC/Trabalho7/ULA_RV.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 5 ularv 0 22 Dz[zon2cU4jTH=1jCWlCS3
+l17
+L14
+VZRAAa5fN6U]_3T?WNfd^z0
+!s100 XO[k3Wfk@M[k[GH11?`I33
+R7
+32
+R8
+!i10b 1
+R9
+R57
+R58
+!i113 1
+R12
+R13
+Eunicycle_riscv
+Z59 w1738693542
+R1
+R2
+R3
+R4
+Z60 8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv.vhd
+Z61 FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv.vhd
+l0
+L6
+VjT3zk[h?J^;Z<dk49g_P60
+!s100 4T;BAhm7=[1fN5fh<VNii3
+R7
+33
+Z62 !s110 1738693549
+!i10b 1
+Z63 !s108 1738693549.000000
+Z64 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv.vhd|
+Z65 !s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv.vhd|
+!i113 1
+R14
+R13
+Aarch
+R1
+R2
+R3
+Z66 DEx4 work 14 unicycle_riscv 0 22 jT3zk[h?J^;Z<dk49g_P60
+l145
+L13
+V]@275:nG[jbNDZdVlMN^`2
+!s100 Pe`96CIVhY<dgm0]NXz4P3
+R7
+33
+R62
+!i10b 1
+R63
+R64
+R65
+!i113 1
+R14
+R13
+Eunicycle_riscv_tb
+Z67 w1738692058
+R1
+R2
+R3
+R4
+Z68 8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv_tb.vhd
+Z69 FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv_tb.vhd
+l0
+L6
+VPBjcBHk=9fL>hmbj0h1Z>0
+!s100 9=3X:lHA>g:lY;cEQSBjD3
+R7
+32
+R8
+!i10b 1
+R9
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv_tb.vhd|
+Z71 !s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv_tb.vhd|
+!i113 1
+R12
+R13
+Atb
+R1
+R2
+R3
+DEx4 work 17 unicycle_riscv_tb 0 22 PBjcBHk=9fL>hmbj0h1Z>0
+l20
+L9
+V77ZmPiKZiMQo7ciGa77=Z1
+!s100 I0h@oXY6V2ECkcAKKX[0a0
+R7
+32
+R8
+!i10b 1
+R9
+R70
+R71
+!i113 1
+R12
+R13
+Exregs
+Z72 w1738692652
+R1
+R2
+R3
+R4
+Z73 8C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/xRegs/xRegs.vhd
+Z74 FC:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/xRegs/xRegs.vhd
+l0
+L5
+V4RSYY8VFK2PYQU<7Clbi30
+!s100 aWLoD>CB:^zYOHiU;h0DM1
+R7
+33
+Z75 !s110 1738692941
+!i10b 1
+Z76 !s108 1738692941.000000
+Z77 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/xRegs/xRegs.vhd|
+Z78 !s107 C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/xRegs/xRegs.vhd|
+!i113 1
+R14
+R13
+Aarch
+R1
+R2
+R3
+DEx4 work 5 xregs 0 22 4RSYY8VFK2PYQU<7Clbi30
+l20
+L15
+VHWa>F:XWBa0]7fEEYX5?93
+!s100 62DVfJ2d3Uj3DZCQi[b_F0
+R7
+33
+R75
+!i10b 1
+R76
+R77
+R78
+!i113 1
+R14
+R13

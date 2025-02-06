@@ -28,7 +28,7 @@ begin
     process (clk)
     begin
         if rising_edge(clk) then
-            if (wren = '1') and (rd /= "00000") then
+            if (wren = '1') and (to_integer(unsigned(rd)) /= 0) then
                 bank(to_integer(unsigned(rd))) <= data;
             end if;
             bank(0) <= (others => '0'); 
