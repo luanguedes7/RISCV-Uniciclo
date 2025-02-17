@@ -6,6 +6,7 @@ library ieee ;
 entity control is
     port (
 	opcode : in std_logic_vector(6 downto 0);
+	func3 : in std_logic_vector(2 downto 0);
 	branch : out std_logic;
 	mem_read : out std_logic;
 	mem_to_reg : out std_logic;
@@ -13,7 +14,9 @@ entity control is
 	mem_write : out std_logic;
 	alu_src: out std_logic;
 	reg_write: out std_logic;
-	reg_write_src : out std_logic_vector(1 downto 0)
+	reg_write_src : out std_logic_vector(1 downto 0);
+	mem_byte_en : out std_logic;
+	mem_sgn_en : out std_logic
     );
 end control;
 
@@ -31,6 +34,8 @@ begin
 		alu_src <= '0';
 		reg_write <= '1';
 		reg_write_src <= "00";
+		mem_byte_en <= '0';
+		mem_sgn_en <= '0';
 	    when "0010011" => -- I type (logic)
 		branch <= '0';
 		mem_read <= '0';
@@ -40,6 +45,8 @@ begin
 		alu_src <= '1';
 		reg_write <= '1';
 		reg_write_src <= "00";
+		mem_byte_en <= '0';
+		mem_sgn_en <= '0';
 	    when "0000011" => -- I type (load)
 		branch <= '0';
 		mem_read <= '1';
@@ -49,15 +56,28 @@ begin
 		alu_src <= '1';
 		reg_write <= '1';
 		reg_write_src <= "00";
+		
+		if func3(1 downto 0) = "00" then
+		    mem_byte_en <= '1';
+		else
+		    mem_byte_en <= '0';
+		end if;
+		if func3 = "100" then
+		    mem_sgn_en <= '1';
+		else
+		    mem_sgn_en <= '0';
+		end if;
 	    when "1100111" => -- I type (jaur)
 		branch <= '1';
-		mem_read <= '1';
-		mem_to_reg <= '1';
+		mem_read <= '0';
+		mem_to_reg <= '0';
 		alu_op <= "00";
 		mem_write <= '0';
 		alu_src <= '1';
 		reg_write <= '1';
 		reg_write_src <= "11";
+		mem_byte_en <= '0';
+		mem_sgn_en <= '0';
 	    when "0100011" => -- S type
 		branch <= '0';
 		mem_read <= '0';
@@ -67,15 +87,23 @@ begin
 		alu_src <= '1';
 		reg_write <= '0';
 		reg_write_src <= "00";
+		if func3 = "000" then
+		    mem_byte_en <= '1';
+		else
+		    mem_byte_en <= '0';
+		end if;
+		mem_sgn_en <= '0';
 	    when "1100011" => -- SB type
 		branch <= '1';
 		mem_read <= '0';
 		mem_to_reg <= '0';
-		alu_op <= "10";
+		alu_op <= "01";
 		mem_write <= '0';
 		alu_src <= '0';
 		reg_write <= '0';
 		reg_write_src <= "00";
+		mem_byte_en <= '0';
+		mem_sgn_en <= '0';
 	    when "0110111" => -- U type (lui)
 		branch <= '0';
 		mem_read <= '0';
@@ -85,6 +113,8 @@ begin
 		alu_src <= '0';
 		reg_write <= '1';
 		reg_write_src <= "01";
+		mem_byte_en <= '0';
+		mem_sgn_en <= '0';
 	    when "0010111" => -- U type (aiupc)
 		branch <= '0';
 		mem_read <= '0';
@@ -94,6 +124,19 @@ begin
 		alu_src <= '0';
 		reg_write <= '1';
 		reg_write_src <= "10";
+		mem_byte_en <= '0';
+		mem_sgn_en <= '0';
+	    when "1101111" => -- UJ type (jal)
+		branch <= '1';
+		mem_read <= '0';
+		mem_to_reg <= '0';
+		alu_op <= "00";
+		mem_write <= '0';
+		alu_src <= '1';
+		reg_write <= '1';
+		reg_write_src <= "11";
+		mem_byte_en <= '0';
+		mem_sgn_en <= '0';
 	when others =>
 		branch <= '0';
 		mem_read <= '0';
@@ -103,6 +146,8 @@ begin
 		alu_src <= '0';
 		reg_write <= '0';
 		reg_write_src <= "00";
+		mem_byte_en <= '0';
+		mem_sgn_en <= '0';
 	end case;
     end process;
 

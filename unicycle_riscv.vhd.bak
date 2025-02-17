@@ -62,19 +62,24 @@ architecture arch of unicycle_riscv is
     signal alu_src : std_logic;
     signal reg_write : std_logic;
     signal reg_write_src : std_logic_vector(1 downto 0);
+    signal mem_byte_en : std_logic;
+    signal mem_sgn_en : std_logic;
 
     component control is
-    	port (
-	    opcode : in std_logic_vector(6 downto 0);
-	    branch : out std_logic;
-	    mem_read : out std_logic;
-	    mem_to_reg : out std_logic;
-	    alu_op : out std_logic_vector(1 downto 0);
-	    mem_write : out std_logic;
-	    alu_src: out std_logic;
-	    reg_write: out std_logic;
-	   reg_write_src : out std_logic_vector(1 downto 0)
-        );
+    port (
+	opcode : in std_logic_vector(6 downto 0);
+	func3 : in std_logic_vector(2 downto 0);
+	branch : out std_logic;
+	mem_read : out std_logic;
+	mem_to_reg : out std_logic;
+	alu_op : out std_logic_vector(1 downto 0);
+	mem_write : out std_logic;
+	alu_src: out std_logic;
+	reg_write: out std_logic;
+	reg_write_src : out std_logic_vector(1 downto 0);
+	mem_byte_en : out std_logic;
+	mem_sgn_en : out std_logic
+    );
     end component;
 
     signal xReg_data : std_logic_vector(WSIZE-1 downto 0);
@@ -127,10 +132,10 @@ architecture arch of unicycle_riscv is
 
     component data_memory is
     	port (
-            clk, we, re: in std_logic;
-            addr: in std_logic_vector(11 downto 0);
-            data_in: in std_logic_vector(31 downto 0);
-            data_out: out std_logic_vector(31 downto 0) := x"00000000"
+            clk, we, byte_en, sgn_en : in std_logic;
+            address: in std_logic_vector(12 downto 0);
+            datain: in std_logic_vector(31 downto 0);
+            dataout: out std_logic_vector(31 downto 0) := x"00000000"
     	);
     end component;
 
@@ -182,6 +187,7 @@ begin
     ctrl : control
     port map (
        	opcode => instr(6 downto 0),
+	func3 => instr(14 downto 12),
       	branch => branch,
      	mem_read => mem_read,
 	mem_to_reg => mem_to_reg,
@@ -189,7 +195,9 @@ begin
 	mem_write => mem_write,
 	alu_src => alu_src,
 	reg_write => reg_write,
-	reg_write_src => reg_write_src
+	reg_write_src => reg_write_src,
+	mem_byte_en => mem_byte_en,
+	mem_sgn_en => mem_sgn_en
     );
 
     reg_bank : xRegs
@@ -238,16 +246,17 @@ begin
     port map(
 	clk => clk,
 	we => mem_write,
-	re => mem_read,
-	addr => alu_out(11 downto 0),
-	data_in => std_logic_vector(ro2),
-	data_out => mem_data_out
+	byte_en => mem_byte_en,
+	sgn_en => mem_sgn_en,
+	address => alu_out(11 downto 0),
+	datain => std_logic_vector(ro2),
+	dataout => mem_data_out
     );
     
     data_mem_mux : mux
     port map (
-	A => mem_data_out,
-	B => alu_out,
+	A => alu_out,
+	B => mem_data_out,
 	S => mem_to_reg,
 	C => reg_write_data
    );

@@ -2,6 +2,7 @@
 library ieee ;
     use ieee.std_logic_1164.all;
     use ieee.numeric_std.all;
+    use std.textio.all;
 
 entity unicycle_riscv_tb is
 end unicycle_riscv_tb;
@@ -32,4 +33,26 @@ begin
 	clk => clk,
 	pc_rst => rst
     );
+
+    process is
+	variable i : integer;
+	file text_file: TEXT open read_mode is "code.asm";
+	variable text_line: line;
+	variable str : string(1 to 100);
+	variable size : natural;
+    begin
+	readline(text_file, text_line);
+	while not endfile(text_file) loop
+	    readline(text_file, text_line);
+	    if text_line'length > 0 then
+		str := (others => ' ');
+		read(text_line, str(1 to text_line'length));
+
+		report str;
+	    end if;
+	    wait for clk_period;
+	end loop;
+	wait;
+    end process;
+
 end tb;

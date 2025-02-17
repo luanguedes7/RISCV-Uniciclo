@@ -1,4 +1,13 @@
-C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/data_memory/data_memory.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/data_memory/data_memory.vhd
+C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/alu/ULA_RV.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/alu/ULA_RV.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ulaRV
+-- Compiling architecture rtl of ulaRV
+
+} {} {}} C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/data_memory/data_memory.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/data_memory/data_memory.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -34,15 +43,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity pc
 -- Compiling architecture arch of pc
 
-} {} {}} C:/Users/migma/Documents/7Semestre/OAC/Trabalho7/ULA_RV.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/migma/Documents/7Semestre/OAC/Trabalho7/ULA_RV.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ulaRV
--- Compiling architecture rtl of ulaRV
-
 } {} {}} C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -70,7 +70,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity genImm32
 -- Compiling architecture arch of genImm32
 
-} {} {}} C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv_tb.vhd
+} {} {}} C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv_tb.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/unicycle_riscv_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -97,15 +97,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity mux4
 -- Compiling architecture arch of mux4
 
-} {} {}} C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/xRegs/xRegs.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/xRegs/xRegs.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity xRegs
--- Compiling architecture arch of xRegs
-
 } {} {}} C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/control/control.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/control/control.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -114,5 +105,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package NUMERIC_STD
 -- Compiling entity control
 -- Compiling architecture arc of control
+
+} {} {}} C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/xRegs/xRegs.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migma/Documents/7Semestre/OAC/unicycle_risv/xRegs/xRegs.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity xRegs
+-- Compiling architecture arch of xRegs
 
 } {} {}}
